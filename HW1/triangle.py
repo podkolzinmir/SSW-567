@@ -1,9 +1,7 @@
 import unittest
 
 def classifyTriangle(a,b,c):
-    if a-b > c or b-c > a or c-a > b or min(a,b,c) <= 0:
-        return 'NotATriangle'
-    else:
+    if a-b < c and b-c < a and c-a < b and min(a,b,c) > 0:
         if a == b == c :
             return "Equilateral"
         elif a == b or b == c or a == c:
@@ -12,7 +10,9 @@ def classifyTriangle(a,b,c):
             if max(a,b,c)**2 == ((a+b+c)-max(a,b,c)-min(a,b,c))**2 + min(a,b,c)**2:
                 return 'Right'
             else:
-                return "Scalene"    
+                return "Scalene"  
+    else:
+        return 'NotATriangle'
 
 def printClassifyTriangle(a,b,c):
     print('classifyTriangle(',a, ',', b, ',', c, ')=' + classifyTriangle(a,b,c))
