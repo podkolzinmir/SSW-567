@@ -1,7 +1,7 @@
 import unittest
 
 def classifyTriangle(a,b,c):
-    if a-b < c and b-c < a and c-a < b and min(a,b,c) > 0:
+    if a+b > c and b+c > a and a+c > b and min(a,b,c) > 0:
         if a == b == c :
             return "Equilateral"
         elif a == b or b == c or a == c:
@@ -20,7 +20,9 @@ def printClassifyTriangle(a,b,c):
 class TestTriangles(unittest.TestCase):
     def testNotATriangle(self):
         self.assertEqual(classifyTriangle(3,3,7), 'NotATriangle')
+        self.assertEqual(classifyTriangle(3,0,7), 'NotATriangle')
         self.assertNotEqual(classifyTriangle(3,3,3), "NotATriangle")
+
 
     def testEquilateral(self):  
         self.assertEqual(classifyTriangle(3,3,3), 'Equilateral')
@@ -42,9 +44,9 @@ if __name__ == '__main__':
 
     printClassifyTriangle(3,4,5)
     printClassifyTriangle(1,5,5)
-    printClassifyTriangle(1,3,5)
+    printClassifyTriangle(6,3,4)
     printClassifyTriangle(4,4,4)
-    printClassifyTriangle(1,4,5)
+    printClassifyTriangle(1,3,5)
 
 
     unittest.main(exit=True)
