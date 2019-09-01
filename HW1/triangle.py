@@ -1,7 +1,7 @@
 import unittest
 
 def classifyTriangle(a,b,c):
-    if a-b > c or b-c > a or c-a > b:
+    if a-b > c or b-c > a or c-a > b or min(a,b,c) <= 0:
         return 'NotATriangle'
     else:
         if a == b == c :
