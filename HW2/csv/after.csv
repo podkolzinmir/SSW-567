@@ -1,0 +1,14 @@
+Test ID,Input,Expected Results,Actual Result,Pass Or Fail
+testInvalidTriangles,1 3 5,NotATriangle,NotATriangle,Pass
+testInvalidTriangles2,1 4 5,NotATriangle,NotATriangle,Pass
+testInvalidTriangles3,1 0 1,NotATriangle,NotATriangle,Pass
+testRightTriangles,3 4 5,Right,Right,Pass
+testRightTriangles2,5 3 4,Right,Right,Pass
+testRightTriangles3,4 5 3,Right,Right,Pass
+testEquilateralTriangles,1 1 1,Equilateral,Equilateral,Pass
+testEquilateralTriangles2,3 3 3,Equilateral,Equilateral,Pass
+testIsocelesTriangles,5 5 1,Isoceles,Isoceles,Pass
+testIsocelesTriangles2,5 1 5,Isoceles,Isoceles,Pass
+testIsocelesTriangles3,1 5 5,Isoceles,Isoceles,Pass
+testScaleneTriangles,5 7 1,Scalene,Scalene,Pass
+testScaleneTriangles2,10 3 5,Scalene,Scalene,Pass
