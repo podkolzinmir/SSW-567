@@ -10,7 +10,7 @@ def GithubApi(username):
 
     response = response.json()
 
-    if len(response) <= 0:
+    if len(response) == 0:
         print("No Repositories")
         return False
   
