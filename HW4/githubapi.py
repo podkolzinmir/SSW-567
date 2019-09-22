@@ -4,7 +4,7 @@ import json
 def GithubApi(username):
     response = requests.get("https://api.github.com/users/"+username+"/repos")
     
-    if response.status_code != 403:
+    if response.status_code == 403:
         print("No Account with that Username")
         return False
 
