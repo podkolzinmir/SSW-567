@@ -8,7 +8,7 @@ def GithubApi(username):
         print("No Account with that Username")
         return False
 
-    response = json.loads(response.content)
+    response = response.json()
 
     if len(response) <= 0:
         print("No Repositories")
