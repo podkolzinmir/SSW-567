@@ -1,10 +1,9 @@
 language: python
 python:
  - "3.5"
+install:
+ - pip install requests
 
-before_script:
-  - cd HW2
-
-# command to run tests
 script:
- - python -m unittest TestTriangle
+  - cd HW4 && python -m unittest TestGithubAPI.py
+# - cd HW2 && python -m unittest TestTriangle
