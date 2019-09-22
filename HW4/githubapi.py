@@ -16,7 +16,7 @@ def GithubApi(username):
   
     for repo in response:
         repoResponse = requests.get(repo['commits_url'].split("{")[0])
-        repoResponse = json.loads(repoResponse.content)
+        repoResponse = repoResponse.json()
         print("Repository Name: "+ repo['name'] + " \t\t\t\tNumber Of Commits: " + str(len(repoResponse)))
    
     return True
